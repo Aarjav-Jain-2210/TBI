@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>CodeX | E-commerce product page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <script defer="" src="script/script.js"></script>
+
+</head>
+
+<body>
+
+  <main>
+    <header id="header">
+
+      <div class="menu_bar">
+        <button onclick="openMenu()"><img src="images/icon-menu.svg"></button>
+      </div>
+      <div class="logo_part">
+        <img src="images/logo.svg" alt="logo image">
+      </div>
+
+      <div class="menu_part">
+
+        <nav>
+          <ul id="menu">
+            <div class="menu_bar close">
+              <button onclick="closeMenu()"><img src="images/icon-close.svg"></button>
+            </div>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="last_part">
+        <div class="cart" onclick="openCart()">
+          <img src="images/icon-cart.svg" alt="cart icon">
+          <span class="item_value" style="display: none;">0</span>
+        </div>
+        <div class="user">
+          <img src="images/image-avatar.png" alt="user image">
+        </div>
+      </div>
+    </header>
+
+    <section id="content">
+      <div class="images_part">
+        <div class="image_box">
+          <img src="images/image-product-1.jpg" alt="image_1" class="image_preview" onclick="openGallery(this)">
+        </div>
+
+        <div class="images_smallbox">
+          <ul>
+            <li>
+              <img src="images/image-product-1-thumbnail.jpg" alt="image_1" onclick="changeImage(this)">
+            </li>
+            <li>
+              <img src="images/image-product-2-thumbnail.jpg" alt="image_2" onclick="changeImage(this)">
+            </li>
+            <li>
+              <img src="images/image-product-3-thumbnail.jpg" alt="image_3" onclick="changeImage(this)">
+            </li>
+            <li>
+              <img src="images/image-product-4-thumbnail.jpg" alt="image_4" onclick="changeImage(this)">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="image_btns">
+        <button onclick="change(-1)"><img src="images/icon-previous.svg" alt="previous button"></button>
+        <button onclick="change(1)"><img src="images/icon-next.svg" alt="next button"></button>
+      </div>
+
+      <div class="info_part">
+        <div class="title">
+          <h1>Sneaker Company</h1>
+          <h2>Fall Limited Edition Sneakers</h2>
+        </div>
+
+        <div class="info_text">
+          <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
+            they’ll withstand everything the weather can offer.</p>
+        </div>
+
+        <div class="price_part">
+          <p class="price">$125.00</p>
+          <p class="offer">50%</p>
+          <p class="before_price">$250.00</p>
+        </div>
+
+        <div class="purchase_part">
+          <div class="quantity_box">
+            <button onclick="quantity(-1)"><img src="images/icon-minus.svg" alt="minus icon"></button>
+            <p class="quantity_value">0</p>
+            <button onclick="quantity(1)"><img src="images/icon-plus.svg" alt="plus icon"></button>
+          </div>
+
+          <div class="purchase_btn">
+            <button onclick="addCart()"><img src="images/icon-cart2.svg" alt="cart icon"> Add to cart</button>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+    </section>
+
+    <!--- Checkout box --->
+    <div id="checkout_box" style="display: none;">
+      <div class="title_part">
+        <h2>Cart</h2>
+      </div>
+
+      <div class="item_part">
+        <div class="item_img">
+          <img src="images/image-product-1-thumbnail.jpg" alt="item image">
+        </div>
+
+        <div class="item_info">
+          <p>Fall Limited Edition Sneakers</p>
+          <p>$125.00 x <span class="quantity">3</span> <span class="total">$375.00</span></p>
+        </div>
+
+        <div class="delete_btn">
+          <button onclick="Remove()"><img src="images/icon-delete.svg" alt="delete button"></button>
+        </div>
+      </div>
+
+      <div class="checkout_part">
+        <button class="btn" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+
+    <div id="light_box">
+      <div class="close_part">
+        <img src="images/icon-close.svg" alt="close button" onclick="closeGallery()">
+      </div>
+
+      <div class="images_part">
+        <button onclick="change(-1)"><img src="images/icon-previous.svg" alt="previous button"></button>
+
+        <img src="images/image-product-1.jpg" alt="image_1" class="image_preview">
+
+        <button onclick="change(1)"><img src="images/icon-next.svg" alt="next button"></button>
+      </div>
+
+      <div class="images_smallbox">
+        <ul>
+          <li>
+            <img src="images/image-product-1-thumbnail.jpg" alt="image_1" onclick="changeImage(this)">
+          </li>
+          <li>
+            <img src="images/image-product-2-thumbnail.jpg" alt="image_2" onclick="changeImage(this)">
+          </li>
+          <li>
+            <img src="images/image-product-3-thumbnail.jpg" alt="image_3" onclick="changeImage(this)">
+          </li>
+          <li>
+            <img src="images/image-product-4-thumbnail.jpg" alt="image_4" onclick="changeImage(this)">
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <small>Coded By <a href="https://jumanjigobez.github.io/personal_portoflio/" target="_blank">CodeX</a></small>
+    </footer>
+  </main>
+
+</body>
+
+</html>
