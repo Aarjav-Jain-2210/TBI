@@ -1,0 +1,247 @@
+/* ========== RESET & BASE STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #fdfdfd;
+    color: #333;
+  }
+  
+  /* ========== HEADER ========== */
+  header {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #ff6a00; /* Example accent color */
+    text-decoration: none;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  nav ul li a:hover {
+    color: #ff6a00;
+  }
+  
+  /* ========== HERO SECTION ========== */
+  .hero {
+    padding: 2rem;
+    text-align: center;
+    background: #ffeccf; /* Light background to mimic your reference */
+  }
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    max-width: 600px;
+    margin: 0.5rem auto 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .hero button {
+    background-color: #ff6a00;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+  }
+  .hero button:hover {
+    background-color: #e65b00;
+  }
+  
+  /* ========== SECTIONS & TITLES ========== */
+  .section-container {
+    padding: 2rem;
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .view-all-btn {
+    display: inline-block;
+    margin-left: auto;
+    background: transparent;
+    color: #ff6a00;
+    border: 1px solid #ff6a00;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .view-all-btn:hover {
+    background: #ff6a00;
+    color: #fff;
+  }
+  
+  /* ========== BOOK CARDS ========== */
+  .book-card-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  
+  .book-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+  }
+  .book-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .book-cover {
+    width: 100px;
+    height: 150px;
+    background-color: #eee; /* Placeholder color */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
+  
+  .book-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    text-align: center;
+  }
+  
+  .book-author {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .rating-stars {
+    color: #ffb400;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* ========== FOOTER ========== */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background: #fff;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  }
+  footer p {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  /* ========== RESPONSIVE EXAMPLE ========== */
+  @media (max-width: 600px) {
+    .section-container {
+      padding: 1rem;
+    }
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+    .hero p {
+      font-size: 0.95rem;
+    }
+  }
+  .checkout-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.checkout-form label {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.checkout-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.checkout-form button {
+    background: #ff6a00;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.checkout-form button:hover {
+    background: #e65b00;
+}
+@media (max-width: 768px) {
+    .checkout-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
+  
